@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Sunshine Zoi ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 25px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 20px;
+      background: white;
+      color: #ff4b6e;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Happy Valentine’s ❤️</h1>
+    <p id="message">Tap below…</p>
+    <button onclick="nextMessage()">Open 💌</button>
+  </div>
+
+  <script>
+    const messages = [
+      "It’s almost been a year…",
+      "And through everything… we’re still here",
+      "I know weve had our fair share of arguments…",
+      "But thats just what makes our relationship stonger..",
+      "I care so deeply about you..",
+      "And I need you to know something clearly…",
+      "You are not losing me.",
+      "I choose you.",
+      "Today.",
+      "And forever zoi. ❤️"
+    ];
+
+    let index = 0;
+
+    function nextMessage() {
+      if (index < messages.length) {
+        document.getElementById("message").innerText = messages[index];
+        index++;
+      } else {
+        document.querySelector("button").innerText = "Forever ♾️";
+      }
+    }
+  </script>
+</body>
+</html>
